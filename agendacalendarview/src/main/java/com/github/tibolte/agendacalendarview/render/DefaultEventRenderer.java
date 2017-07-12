@@ -1,6 +1,7 @@
 package com.github.tibolte.agendacalendarview.render;
 
 import android.support.annotation.NonNull;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ public class DefaultEventRenderer extends EventRenderer<BaseCalendarEvent> {
         LinearLayout descriptionContainer = (LinearLayout) view.findViewById(R.id.view_agenda_event_description_container);
         LinearLayout locationContainer = (LinearLayout) view.findViewById(R.id.view_agenda_event_location_container);
         LinearLayout descriptionContainerLeft = (LinearLayout) view.findViewById(R.id.view_agenda_event_left);
+        TextView txtFrom = (TextView) view.findViewById(R.id.view_agenda_event_from);
+        TextView txtTo = (TextView) view.findViewById(R.id.view_agenda_event_to);
 
         descriptionContainer.setVisibility(View.VISIBLE);
         txtTitle.setTextColor(view.getResources().getColor(android.R.color.black));
@@ -40,7 +43,7 @@ public class DefaultEventRenderer extends EventRenderer<BaseCalendarEvent> {
         } else {
             txtTitle.setTextColor(view.getResources().getColor(R.color.theme_text_icons));
         }
-        descriptionContainerLeft.setBackgroundColor(event.getColor());
+//        descriptionContainerLeft.setBackgroundColor(event.getColor());
         txtLocation.setTextColor(view.getResources().getColor(R.color.theme_text_icons));
     }
 

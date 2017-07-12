@@ -27,6 +27,14 @@
             android:layout_gravity="center"
             style="@style/CalendarCellText"/>
 
+        <TextView
+            android:id="@+id/view_day_day_point"
+            android:layout_gravity="center"
+            android:text="_"
+            android:paddingTop="4dp"
+            android:textSize="16dp"
+            style="@style/CalendarCellText"/>
+
     </FrameLayout>
 
 </LinearLayout>
