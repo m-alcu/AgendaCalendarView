@@ -8,6 +8,10 @@ import android.widget.TextView;
 
 import com.github.tibolte.agendacalendarview.R;
 import com.github.tibolte.agendacalendarview.models.BaseCalendarEvent;
+import com.github.tibolte.agendacalendarview.utils.DateHelper;
+
+import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * Class helping to inflate our default layout in the AgendaAdapter
@@ -38,12 +42,22 @@ public class DefaultEventRenderer extends EventRenderer<BaseCalendarEvent> {
             locationContainer.setVisibility(View.GONE);
         }
 
+        if (!event.isAllDay() && event.getStartTime() != null && event.getEndTime() != null) {
+            txtFrom.setText(DateHelper.getHourFromCalendar(event.getStartTime(), Locale.getDefault()));
+            txtTo.setText(DateHelper.getHourFromCalendar(event.getEndTime(), Locale.getDefault()));
+        } else {
+            txtFrom.setText("DIA");
+            txtTo.setText("1/2");
+        }
+
         if (event.getTitle().equals(view.getResources().getString(R.string.agenda_event_no_events))) {
             txtTitle.setTextColor(view.getResources().getColor(R.color.blue_selected));
         } else {
             txtTitle.setTextColor(view.getResources().getColor(R.color.theme_text_icons));
         }
 //        descriptionContainerLeft.setBackgroundColor(event.getColor());
+        txtFrom.setTextColor(event.getColor());
+        txtTo.setTextColor(event.getColor());
         txtLocation.setTextColor(view.getResources().getColor(R.color.theme_text_icons));
     }
 

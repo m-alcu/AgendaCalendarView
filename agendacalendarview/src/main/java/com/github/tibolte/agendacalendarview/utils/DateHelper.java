@@ -131,5 +131,10 @@ public class DateHelper {
         return yearLessDate;
     }
 
+    public static String getHourFromCalendar(Calendar calendar, Locale locale) {
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+        return sdf.format(calendar.getTime());
+    }
+
     // endregion
 }

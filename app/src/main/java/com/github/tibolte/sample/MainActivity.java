@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements CalendarPickerCon
         Calendar endTime1 = Calendar.getInstance();
         endTime1.add(Calendar.MONTH, 1);
         BaseCalendarEvent event1 = new BaseCalendarEvent("Revisión requerimientos ALLDAY", "Diseño App", "Despacho 1",
-                ContextCompat.getColor(this, R.color.theme_event_pending), startTime1, endTime1, true);
+                ContextCompat.getColor(this, R.color.theme_primary), startTime1, endTime1, true);
         eventList.add(event1);
 
         Calendar startTime2 = Calendar.getInstance();
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements CalendarPickerCon
         Calendar endTime2 = Calendar.getInstance();
         endTime2.add(Calendar.DAY_OF_YEAR, 3);
         BaseCalendarEvent event2 = new BaseCalendarEvent("Arquitectura, reunión seguimiento", "Reunión periodica importante", "Sala 2B",
-                ContextCompat.getColor(this, R.color.theme_event_pending), startTime2, endTime2, true);
+                ContextCompat.getColor(this, R.color.theme_primary), startTime2, endTime2, true);
         eventList.add(event2);
 
         Calendar startTime3 = Calendar.getInstance();
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements CalendarPickerCon
         endTime3.set(Calendar.HOUR_OF_DAY, 15);
         endTime3.set(Calendar.MINUTE, 0);
         BaseCalendarEvent event3 = new BaseCalendarEvent("Reunión de coordinación AGN", "i", "Despacho 2",
-                ContextCompat.getColor(this, R.color.theme_event_confirmed), startTime3, endTime3, false);
+                ContextCompat.getColor(this, R.color.theme_primary), startTime3, endTime3, false);
         eventList.add(event3);
 
         Calendar startTime4 = Calendar.getInstance();
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements CalendarPickerCon
         endTime4.set(Calendar.HOUR_OF_DAY, 17);
         endTime4.set(Calendar.MINUTE, 0);
         BaseCalendarEvent event4 = new BaseCalendarEvent("Reunión de coordinación AGN 2", "i", "Despacho 3",
-                ContextCompat.getColor(this, R.color.theme_event_confirmed), startTime4, endTime4, false);
+                ContextCompat.getColor(this, R.color.theme_primary), startTime4, endTime4, false);
         eventList.add(event4);
 
         Calendar startTime5 = Calendar.getInstance();
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements CalendarPickerCon
         endTime5.set(Calendar.HOUR_OF_DAY, 19);
         endTime5.set(Calendar.MINUTE, 0);
         BaseCalendarEvent event5 = new BaseCalendarEvent("Reunión de coordinación AGN 3", "i", "Despacho 3",
-                ContextCompat.getColor(this, R.color.theme_event_confirmed), startTime5, endTime5, false);
+                ContextCompat.getColor(this, R.color.theme_primary), startTime5, endTime5, false);
         eventList.add(event5);
     }
 
